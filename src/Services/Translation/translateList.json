@@ -1,0 +1,20 @@
+{
+    "MODULE": [
+        {
+            "MODULE_ID": 1,
+            "NAME": "Global"
+        },
+        {
+            "MODULE_ID": 2,
+            "NAME": "Header"
+        },
+        {
+            "MODULE_ID": 3,
+            "NAME": "Footer"
+        },
+        {
+            "MODULE_ID": 4,
+            "NAME": "Home"
+        }
+    ]
+}

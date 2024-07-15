@@ -1,0 +1,30 @@
+/* Global */
+html[dir="rtl"] body {
+    margin: 0;
+}
+
+/* Auth */
+html[dir="rtl"] .authHeader img {
+    left: 0;
+    right: auto;
+}
+
+/* Header */
+html[dir="rtl"] .headerSearch button {
+    left: 0;
+    right: auto;
+}
+
+/* Grid */
+html[dir="rtl"] .MuiDataGrid-toolbarContainer {
+    direction: rtl !important;
+}
+
+/* Font Family*/
+*[dir="ltr"] {
+    font-family: 'Barlow' !important;
+}
+
+*[dir="rtl"] {
+    font-family: 'Barlow' !important;
+}
