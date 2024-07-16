@@ -15,7 +15,7 @@ const useStyles = makeStyles()((theme) => {
             alignItems: 'center',
             justifyContent: 'space-between',
             backgroundColor: theme.palette.primary.dark,
-            borderBottom: '1px solid' + theme.palette.primary.light
+            borderBottom: '1px solid' + theme.palette.secondary.dark
         },
         changeLang: {
             display: 'flex',

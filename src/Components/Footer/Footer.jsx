@@ -74,7 +74,7 @@ const Footer = () => {
                                     <NavLink to='/'>{t('Footer:courses')}</NavLink>
                                 </ListItem>
                                 <ListItem>
-                                    <NavLink to='/'>{t('Footer:ebooks')}</NavLink>
+                                    <NavLink to='/EbooksList'>{t('Footer:ebooks')}</NavLink>
                                 </ListItem>
                             </List>
                         </MuiGrid>

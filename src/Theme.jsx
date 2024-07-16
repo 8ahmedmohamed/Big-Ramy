@@ -12,8 +12,8 @@ const theme = (theme) => createTheme({
         secondary: {
             main: '#55E748',
             dark: '#636363',
-            light: '#f3f3f9',
-            bgColor: '#043552',
+            light: '#55e74880',
+            bgColor: '#272727',
             contrastText: '#212529'
         },
         map: {

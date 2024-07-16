@@ -7,7 +7,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 // Route Provider
-import RouteProvider from "./Services/Routes";
+import RouteProvider from "./Services/Routes/RouteProvider";
 
 // Translation
 import { useTranslation } from "react-i18next";

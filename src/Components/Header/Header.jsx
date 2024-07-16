@@ -50,7 +50,13 @@ const Header = () => {
                 </Box>
                 <Box className={classes.middleHeader}>
                     <Container className={classes.middleHeaderContainer}>
-                        <img src={mainLogo} alt='mainLogo' />
+                        <List className={classes.signInSignUp}>
+                            <ListItem className={classes.sign}>
+                                <NavLink to='/' className={classes.menuLink}>
+                                    <img src={mainLogo} alt='mainLogo' />
+                                </NavLink>
+                            </ListItem>
+                        </List>
                         <List className={classes.signInSignUp}>
                             <ListItem className={classes.sign}>
                                 <NavLink to='/' className={classes.menuLink}>{t('Global:signIn')}</NavLink>
@@ -78,7 +84,7 @@ const Header = () => {
                                     <NavLink to='/Courses' className={classes.menuLink}>{t('Header:courses')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.item}>
-                                    <NavLink to='/Ebooks' className={classes.menuLink}>{t('Header:ebooks')}</NavLink>
+                                    <NavLink to='/EbooksList' className={classes.menuLink}>{t('Header:ebooks')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.item}>
                                     <NavLink to='/Contactus' className={classes.menuLink}>{t('Header:contactUs')}</NavLink>
@@ -102,7 +108,7 @@ const Header = () => {
                                     <NavLink to='/Courses' className={classes.mobileLink}>{t('Header:courses')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.mobileItem}>
-                                    <NavLink to='/Ebooks' className={classes.mobileLink}>{t('Header:ebooks')}</NavLink>
+                                    <NavLink to='/EbooksList' className={classes.mobileLink}>{t('Header:ebooks')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.mobileItem}>
                                     <NavLink to='/Contactus' className={classes.mobileLink}>{t('Header:contactUs')}</NavLink>

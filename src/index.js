@@ -4,14 +4,14 @@ import ReactDOM from "react-dom/client";
 // React Router
 import { BrowserRouter } from "react-router-dom";
 
+// Store
+import { MasterStore } from './Services/MasterStore/MasterStore';
+
 // Store Provider
-import StoreProvider from "./Services/Stores";
+import { Provider } from 'react-redux';
 
 // Translation
 import "./Services/Translation";
-
-// Middleware
-import Middleware from "./Services/Middleware/Middleware";
 
 // React Toastify
 import { ToastContainer } from "react-toastify";
@@ -26,15 +26,13 @@ import "@splidejs/react-splide/css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.Fragment>
-    <Suspense>
-      <StoreProvider>
+    <Provider store={MasterStore}>
+      <Suspense>
         <BrowserRouter basename="/">
-          <Middleware>
-            <App />
-            <ToastContainer />
-          </Middleware>
+          <App />
+          <ToastContainer />
         </BrowserRouter>
-      </StoreProvider>
-    </Suspense>
+      </Suspense>
+    </Provider>
   </React.Fragment>
 );
