@@ -34,7 +34,7 @@ const EbookDetails = () => {
 
     useEffect(() => {
         dispatch(GetEbookDetails(id)).then((res) => {
-            const numPages = res.payload.data.attributes.book.num_of_pages;
+            const numPages = res ? res?.payload?.data?.attributes?.book.num_of_pages : 0;
             setPageCount(Math.ceil(numPages / 2));
         });
     }, [dispatch, id])
