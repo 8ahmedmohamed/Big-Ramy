@@ -9,9 +9,15 @@ import { Outlet } from 'react-router-dom';
 // Material UI
 import { Box } from "@mui/material";
 
+// Scroll To Top
+import ScrollToTop from "react-scroll-to-top";
+
 // Components
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
+
+// Icons
+import { KeyboardArrowUp } from '@mui/icons-material';
 
 // Theme
 import useStyles from './Theme';
@@ -30,6 +36,7 @@ const Container = () => {
                 <Outlet />
             </Box>
             <Footer />
+            <ScrollToTop smooth className={classes.scrollToTop + ` ${localStorage.language === 'ar' ? 'dirRight' : ''}`} component={<KeyboardArrowUp />} />
         </React.Fragment>
     )
 }

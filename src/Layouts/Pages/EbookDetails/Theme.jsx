@@ -45,7 +45,16 @@ const useStyles = makeStyles()((theme) => {
                 boxShadow: 'none',
                 color: theme.palette.primary.contrastText,
                 backgroundColor: theme.palette.secondary.bgColor,
+                '&.Mui-expanded': {
+                    margin: '0px',
+                },
                 '& .MuiAccordionSummary-root': {
+                    '&.Mui-expanded': {
+                        minHeight: '48px'
+                    },
+                    '& .MuiAccordionSummary-content.Mui-expanded': {
+                        margin: '12px 0px'
+                    },
                     '& p': {
                         fontSize: '24px',
                         fontWeight: '800'
@@ -142,6 +151,12 @@ const useStyles = makeStyles()((theme) => {
             '& .MuiPaginationItem-page': {
                 color: theme.palette.secondary.main,
                 border: '1px solid ' + theme.palette.secondary.main,
+                '&.Mui-selected': {
+                    backgroundColor: theme.palette.secondary.dark,
+                    '&:hover': {
+                        backgroundColor: theme.palette.secondary.dark
+                    }
+                }
             }
         }
     }

@@ -23,16 +23,26 @@ const useStyles = makeStyles()((theme) => {
                 margin: '30px 0px',
                 '& .splide__arrow': {
                     backgroundColor: 'transparent',
-                    '&.splide__arrow--prev': {
-                        left: '-5px'
-                    },
-                    '&.splide__arrow--next': {
-                        right: '-5px'
-                    },
                     '& svg': {
                         fontSize: '25px',
                         fill: theme.palette.secondary.main,
-                    }
+                    },
+                },
+                "& .splide__arrows--ltr": {
+                    '& .splide__arrow--prev': {
+                        left: '-5px'
+                    },
+                    '& .splide__arrow--next': {
+                        right: '-5px'
+                    },
+                },
+                "& .splide__arrows--rtl": {
+                    '& .splide__arrow--prev': {
+                        right: '-5px'
+                    },
+                    '& .splide__arrow--next': {
+                        left: '-5px'
+                    },
                 }
             },
             '& .splide__track': {
@@ -52,6 +62,10 @@ const useStyles = makeStyles()((theme) => {
                 justifyContent: 'center',
                 '&:hover': {
                     backgroundColor: theme.palette.primary.light
+                },
+                '&.selected': {
+                    color: theme.palette.primary.dark,
+                    backgroundColor: theme.palette.secondary.main
                 }
             }
         },
@@ -137,6 +151,20 @@ const useStyles = makeStyles()((theme) => {
                     fill: theme.palette.primary.dark,
                 },
             }
+        },
+        empty: {
+            gap: '15px',
+            display: 'flex',
+            cursor: 'default',
+            alignItems: 'center',
+            flexDirection: 'column',
+            '& h5': {
+                fontWeight: '800',
+                color: theme.palette.primary.contrastText
+            },
+            '& p': {
+                color: theme.palette.primary.contrastText
+            },
         },
         pagination: {
             margin: '20px 0px',

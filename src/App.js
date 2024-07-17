@@ -9,6 +9,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 // Route Provider
 import RouteProvider from "./Services/Routes/RouteProvider";
 
+// Request Provider
+import RequestProvider from './Services/Middleware/Requests/RequestProvider';
+
 // Translation
 import { useTranslation } from "react-i18next";
 
@@ -32,9 +35,11 @@ const App = () => {
   return (
     <React.Fragment>
       <ThemeProvider theme={theme(language)}>
-        <RouteProvider>
-          <CssBaseline />
-        </RouteProvider>
+        <RequestProvider>
+          <RouteProvider>
+            <CssBaseline />
+          </RouteProvider>
+        </RequestProvider>
       </ThemeProvider>
     </React.Fragment>
   );

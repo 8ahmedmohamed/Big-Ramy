@@ -135,6 +135,9 @@ const useStyles = makeStyles()((theme) => {
             '&:hover': {
                 color: theme.palette.secondary.main
             },
+            '&.selected': {
+                color: theme.palette.secondary.main
+            },
             [theme.breakpoints.down('lg')]: {
                 fontSize: '18px'
             }

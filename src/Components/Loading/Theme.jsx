@@ -3,16 +3,15 @@ import { makeStyles } from 'tss-react/mui';
 const useStyles = makeStyles()((theme) => {
     return {
         root: {
-            margin: 0
-        },
-        scrollToTop: {
+            margin: 0,
+            width: '100%',
             display: 'flex',
-            borderRadius: '50% !important',
+            height: '100vh',
             alignItems: 'center',
             justifyContent: 'center',
-            '&.dirRight': {
-                left: '40px !important',
-                right: 'auto',
+            backgroundColor: 'transparent',
+            '& .MuiCircularProgress-root': {
+                backgroundColor: 'transparent',
             }
         }
     }

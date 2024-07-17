@@ -20,7 +20,7 @@ const Routes = () => {
 			children: [
 				{ path: '', element: <Home /> },
 				{ path: '/EbooksList', element: <EbooksList /> },
-				{ path: '/EbookDetails', element: <EbookDetails /> },
+				{ path: '/EbookDetails/:id', element: <EbookDetails /> },
 			]
 		}
 	]);

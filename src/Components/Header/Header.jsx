@@ -23,6 +23,7 @@ const Header = () => {
     const { t } = useTranslation(['Global', 'Header']);
     const [mobileMenu, setMobileMenu] = useState(false);
     const [position, setPosition] = useState(localStorage.language === 'ar' ? false : true);
+    const [option, setOption] = useState('home');
 
     const ChangeLanguage = () => {
         setPosition(!position);
@@ -75,19 +76,19 @@ const Header = () => {
                         <Box className={classes.menuItems}>
                             <List className={classes.list}>
                                 <ListItem className={classes.item}>
-                                    <NavLink to='/' className={classes.menuLink}>{t('Global:home')}</NavLink>
+                                    <NavLink to='/' className={classes.menuLink + ` ${option === 'home' ? 'selected' : ''}`} onClick={() => { setOption('home'); }}>{t('Global:home')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.item}>
-                                    <NavLink to='/News' className={classes.menuLink}>{t('Header:news')}</NavLink>
+                                    <NavLink to='/' className={classes.menuLink + ` ${option === 'news' ? 'selected' : ''}`} onClick={() => { setOption('news'); }}>{t('Header:news')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.item}>
-                                    <NavLink to='/Courses' className={classes.menuLink}>{t('Header:courses')}</NavLink>
+                                    <NavLink to='/' className={classes.menuLink + ` ${option === 'courses' ? 'selected' : ''}`} onClick={() => { setOption('courses'); }}>{t('Header:courses')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.item}>
-                                    <NavLink to='/EbooksList' className={classes.menuLink}>{t('Header:ebooks')}</NavLink>
+                                    <NavLink to='/EbooksList' className={classes.menuLink + ` ${option === 'ebooks' ? 'selected' : ''}`} onClick={() => { setOption('ebooks'); }}>{t('Header:ebooks')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.item}>
-                                    <NavLink to='/Contactus' className={classes.menuLink}>{t('Header:contactUs')}</NavLink>
+                                    <NavLink to='/' className={classes.menuLink + ` ${option === 'contactUs' ? 'selected' : ''}`} onClick={() => { setOption('contactUs'); }}>{t('Header:contactUs')}</NavLink>
                                 </ListItem>
                             </List>
                         </Box>
@@ -99,19 +100,19 @@ const Header = () => {
                         <Box className={`${classes.mobileMenu} ${mobileMenu ? classes.show : classes.hide}`}>
                             <List className={classes.mobileList}>
                                 <ListItem className={classes.mobileItem}>
-                                    <NavLink to='/' className={classes.mobileLink}>{t('Global:home')}</NavLink>
+                                    <NavLink to='/' className={classes.mobileLink + ` ${option === 'home' ? 'selected' : ''}`} onClick={() => { setOption('home'); }}>{t('Global:home')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.mobileItem}>
-                                    <NavLink to='/News' className={classes.mobileLink}>{t('Header:news')}</NavLink>
+                                    <NavLink to='/' className={classes.mobileLink + ` ${option === 'news' ? 'selected' : ''}`} onClick={() => { setOption('news'); }}>{t('Header:news')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.mobileItem}>
-                                    <NavLink to='/Courses' className={classes.mobileLink}>{t('Header:courses')}</NavLink>
+                                    <NavLink to='/Courses' className={classes.mobileLink + ` ${option === 'courses' ? 'selected' : ''}`} onClick={() => { setOption('courses'); }}>{t('Header:courses')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.mobileItem}>
-                                    <NavLink to='/EbooksList' className={classes.mobileLink}>{t('Header:ebooks')}</NavLink>
+                                    <NavLink to='/' className={classes.mobileLink + ` ${option === 'ebooks' ? 'selected' : ''}`} onClick={() => { setOption('ebooks'); }}>{t('Header:ebooks')}</NavLink>
                                 </ListItem>
                                 <ListItem className={classes.mobileItem}>
-                                    <NavLink to='/Contactus' className={classes.mobileLink}>{t('Header:contactUs')}</NavLink>
+                                    <NavLink to='/' className={classes.mobileLink + ` ${option === 'contactUs' ? 'selected' : ''}`} onClick={() => { setOption('contactUs'); }}>{t('Header:contactUs')}</NavLink>
                                 </ListItem>
                             </List>
                         </Box>

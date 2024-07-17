@@ -19,7 +19,7 @@ import useStyles from './Theme';
 
 const Footer = () => {
     const { classes } = useStyles();
-    const { t } = useTranslation(['Global', 'Footer']);
+    const { t } = useTranslation(['Footer']);
 
     return (
         <React.Fragment>

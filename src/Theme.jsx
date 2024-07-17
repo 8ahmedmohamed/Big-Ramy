@@ -15,11 +15,6 @@ const theme = (theme) => createTheme({
             light: '#55e74880',
             bgColor: '#272727',
             contrastText: '#212529'
-        },
-        map: {
-            exploited: '#ff0000',
-            opportunity: '#38a800',
-            unused: '#0070ff'
         }
     },
     typography: {

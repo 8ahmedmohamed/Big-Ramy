@@ -15,6 +15,14 @@
         {
             "MODULE_ID": 4,
             "NAME": "Home"
+        },
+        {
+            "MODULE_ID": 5,
+            "NAME": "EbooksList"
+        },
+        {
+            "MODULE_ID": 6,
+            "NAME": "EbookDetails"
         }
     ]
 }

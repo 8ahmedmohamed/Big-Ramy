@@ -13,6 +13,9 @@ import { Provider } from 'react-redux';
 // Translation
 import "./Services/Translation";
 
+// Loading
+import Loading from "./Components/Loading/Loading";
+
 // React Toastify
 import { ToastContainer } from "react-toastify";
 
@@ -27,7 +30,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.Fragment>
     <Provider store={MasterStore}>
-      <Suspense>
+      <Suspense fallback={<Loading />}>
         <BrowserRouter basename="/">
           <App />
           <ToastContainer />
