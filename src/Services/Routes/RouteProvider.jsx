@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Routes
-import Routes from './Routes';
+import Routes from './routes';
 
 const RouteProvider = ({ children }) => {
     return (
